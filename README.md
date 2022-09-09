@@ -1,63 +1,70 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Discrete Distributions Lesson
+# US States Education Performance
 
-## Materials We Provide
+### Overview
 
+Our first module in DSI covers:
+- Basic statistics and probability
+- Many Python programming concepts
+- Programmatically interacting with files and directories
+- Visualizations
+- EDA
+- Working with Jupyter notebooks for development and reporting
 
-| Topic | Description | Link |
-| --- | --- | --- |
-| Lesson | Discrete Distributions | [Link](./starter-code.ipynb)|
-| Lesson | Discrete Distributions Level 2 (supplemental)| [Link](./extras/discrete_distributions-level2.ipynb)|
+You might wonder if you're ready to start doing data science. While you still have **tons** to learn, there are many aspects of the data science process that you're ready to tackle. Project 1 aims to allow you to practice and demonstrate these skills.
 
-> **Dataset description:** Simulated Data
+For our first project, we're going to take a look at aggregate SAT and ACT scores and participation rates in the United States. We'll seek to identify trends in the data and combine our data analysis with outside research to address our problem statement.
 
----
+The SAT and ACT are standardized tests that many colleges and universities in the United States require for their admissions process. This score is used along with other materials such as grade point average (GPA) and essay responses to determine whether or not a potential student will be accepted to the university.
 
-## Learning Objectives
+The SAT has two sections of the test: Evidence-Based Reading and Writing and Math ([*source*](https://www.princetonreview.com/college/sat-sections)). The ACT has 4 sections: English, Mathematics, Reading, and Science, with an additional optional writing section ([*source*](https://www.act.org/content/act/en/products-and-services/the-act/scores/understanding-your-scores.html)). They have different score ranges, which you can read more about on their websites or additional outside sources (a quick Google search will help you understand the scores for each test):
+* [SAT](https://collegereadiness.collegeboard.org/sat)
+* [ACT](https://www.act.org/content/act/en.html)
 
-*After this lesson, students will be able to:*
+Standardized tests have long been a controversial topic for students, administrators, and legislators. Since the 1940's, an increasing number of colleges have been using scores from sudents' performances on tests like the SAT and the ACT as a measure for college readiness and aptitude ([*source*](https://www.minotdailynews.com/news/local-news/2017/04/a-brief-history-of-the-sat-and-act/)). Supporters of these tests argue that these scores can be used as an objective measure to determine college admittance. Opponents of these tests claim that these tests are not accurate measures of students potential or ability and serve as an inequitable barrier to entry.
 
-1. Define distribution and random variable.
-2. Describe the difference between discrete and continuous random variables.
-3. Understand the difference between probability mass functions and cumulative distribution functions.
-4. Give examples of the following distributions: Discrete Uniform, Bernoulli, Binomial, and Poisson.
+### Problem Statement
 
----
+Education is one of the most important factor for every country in the world. To develop human well-being, well educated citizen can provide security of society, also sustainable economic.
 
-## Student Requirements
+US spends a lot of money for primary and secondary schools but how can the investment of education be measured over the country.
 
-*Before this lesson(s), students should already be able to:*
-
-1. Open and run cells in Jupyter notebooks.
-2. Call functions.
-
----
-
-## Lesson Outline
-
-> **Total Time: 120 mins**
-
-0. **Introduction!** (10 minutes total)
-
-I. **Data Science Process** (10 minutes total)
-
-II. **Distributions Intro** (30 minutes total)
-- Exploring Data
-- Terminology
-- Continuous vs. Discrete Distributions
-
-III. **Named Discrete Probability Distributions** (60 minutes total)
-- PMF/CDF
-- Discrete Uniform
-- Bernoulli
-- Binomial
-- Poisson
-
-IV. **Recap** (10 minutes total)
+Therefore, the project aims to measure education performance and public spending on education by using standardized tests, SAT and ACT, over US states.
 
 ---
 
-## OPTIONAL: Resources for Practice and Learning
+### Datasets
 
-*For supplemental reading material on this topic, check out the following resources:*
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|year|object|ACT/SAT 2017-2019|Year of recording| 
+|state|object|ACT/SAT 2017-2019|US state| 
+|sat_participation|float|SAT 2017-2019|SAT participation rate| 
+|sat_eng|float|SAT 2017-2019|SAT evidence-based reading and writing scores| 
+|sat_math|float|SAT 2017-2019|SAT Math scores| 
+|sat_total|float|SAT 2017-2019|SAT total scores| 
+|act_participation|float|ACT 2017-2019|ACT participation rate| 
+|act_composite|float|ACT 2017-2019|ACT average scores| 
+|act_eng|float|ACT 2017|ACT English scores| 
+|act_math|float|ACT 2017|ACT Math scores| 
+|act_reading|float|ACT 2017|ACT Reading scores| 
+|act_science|float|ACT 2017|ACT Science scores| 
+|perpupil_spending|float|Census 2017-2019|Per pupil school public spending| 
+|combine_participation|float|Calculation|Combination of SAT and ACT participation rate| 
+|sat_total_normal|float|Calculation|Percentage of SAT total scores| 
+|sat_weight|float|Calculation|Weight for SAT/ACT index| 
+|act_total_normal|float|Calculation|Percentage of ACT total scores| 
+|act_weight|float|Calculation|Weight for SAT/ACT index| 
+|combine_total_normal_weighted|float|Calculation|Weighted SAT/ACT index| 
+|combine_total_normal|float|Calculation|Un-weighted SAT/ACT index| 
+|spending_2019_group|Object|Calculation|Group of 2019 education spending and SAT/ACT index| 
 
-- [Brown University Seeing Theory](https://students.brown.edu/seeing-theory/)
+---
+
+### Conclusions and Recommendations
+
+According to the project results, public educational spending related to education level (SAT/ACT index).  
+But some states are found to spend large money with lower education level achieved that are Minnesota, Hawaii, Ohio, North Dakota, and Wyoming.
+These states should be investigated to find reasons that prevent the states perform well after spend a large money.
+
+---
+
